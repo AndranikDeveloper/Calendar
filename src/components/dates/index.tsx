@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
-import style from "./days.module.css";
-import { IDatesState } from "../../types/dates-types";
-import { currentMonth, daysOfWeek, getDatesData } from "./services";
+import { useEffect, useState } from 'react';
+import style from './days.module.css';
+import { IDatesState } from '../../types/dates-types';
+import { currentMonth, daysOfWeek, getDatesData } from './services';
+import { Month } from '../month';
 
 export const Dates = () => {
   const [dates, setDates] = useState<IDatesState[]>();
+  const [currentDate, setCurrentDate] = useState<IDatesState>();
   useEffect(() => {
     (async function getDates() {
       const data = await getDatesData();
@@ -12,7 +14,15 @@ export const Dates = () => {
     })();
   }, []);
 
-  console.log(dates);
+  useEffect(() => {
+    const current = dates?.find(
+      (date) => date.month.toLowerCase() === currentMonth.toLowerCase()
+    );
+
+    setCurrentDate(current);
+  }, [dates]);
+
+  console.log(dates, currentDate);
 
   return (
     <div className={style.dates}>
@@ -27,18 +37,8 @@ export const Dates = () => {
             ))}
           </tr>
         </thead>
-        <tbody className={style["table-body"]}>
-          {Array(5)
-            .fill("0")
-            .map((_) => (
-              <tr>
-                {Array(7)
-                  .fill("0")
-                  .map((i) => (
-                    <td>{i}</td>
-                  ))}
-              </tr>
-            ))}
+        <tbody className={style['table-body']}>
+          <Month date={currentDate!} />
         </tbody>
       </table>
     </div>

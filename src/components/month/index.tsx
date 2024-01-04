@@ -12,14 +12,6 @@ export const Month: React.FC<IMonthProps> = ({ date }) => {
         .fill(null)
         .map((_, rowIndex) => (
           <tr key={rowIndex}>
-            {/* {Array(7)
-              .fill(null)
-              .map((_, columnIndex) => {
-                const dayIndex = rowIndex * 7 + columnIndex;
-                const currentDay = date?.dates[dayIndex];
-
-                return <td key={currentDay}>{currentDay ? currentDay : ''}</td>;
-              })} */}
             {Array(7)
               .fill(null)
               .map((_, columnIndex) => {

@@ -4,13 +4,13 @@ const date = new Date();
 export const currentMonth = date.toLocaleString('default', { month: 'long' });
 
 export const daysOfWeek = [
-  'Sunday',
   'Monday',
   'Tuesday',
   'Wednesday',
   'Thursday',
   'Friday',
   'Saturday',
+  'Sunday',
 ];
 
 export function findDate(month: string, day: number) {

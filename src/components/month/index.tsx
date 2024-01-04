@@ -1,40 +1,26 @@
-import React from 'react';
-import { IDatesState } from '../../types/dates-types';
+import React from "react";
+import { IDatesState } from "../../types/dates-types";
+import useMonthDays from "./hooks/useMonthDays";
+import style from "./month.module.css";
 
 interface IMonthProps {
   date: IDatesState;
 }
 
 export const Month: React.FC<IMonthProps> = ({ date }) => {
+  const { days = [] } = useMonthDays({ date });
+
   return (
     <>
-      {Array(5)
-        .fill(null)
-        .map((_, rowIndex) => (
-          <tr key={rowIndex}>
-            {/* {Array(7)
-              .fill(null)
-              .map((_, columnIndex) => {
-                const dayIndex = rowIndex * 7 + columnIndex;
-                const currentDay = date?.dates[dayIndex];
-
-                return <td key={currentDay}>{currentDay ? currentDay : ''}</td>;
-              })} */}
-            {Array(7)
-              .fill(null)
-              .map((_, columnIndex) => {
-                const dayIndex = rowIndex * 7 + columnIndex;
-                const currentDay = date?.dates[dayIndex];
-                const isFirstRow = rowIndex === 0 && columnIndex < 0;
-
-                return (
-                  <td key={currentDay}>
-                    {isFirstRow ? '' : currentDay ? currentDay : ''}
-                  </td>
-                );
-              })}
-          </tr>
-        ))}
+      {days?.map((day, idx) => (
+        <tr key={idx}>
+          {day?.map((number, idx) => (
+            <td key={idx} className={style.day}>
+              {number}
+            </td>
+          ))}
+        </tr>
+      ))}
     </>
   );
 };

@@ -1,0 +1,34 @@
+{
+    "specialDays": [
+        {
+            "name": "New Year",
+            "day": 1,
+            "month": "January",
+            "color": "red"
+        },
+        {
+            "name": "Women's Day",
+            "day": 8,
+            "month": "March",
+            "color": "pink"
+        },
+        {
+            "name": "Valentine's Day",
+            "day": 14,
+            "month": "February",
+            "color": "pink"
+        },
+        {
+            "name": "Genocide",
+            "day": 24,
+            "month": "April",
+            "color": "black"
+        },
+        {
+            "name": "My Birthday",
+            "day": 18,
+            "month": "February",
+            "color": "purple"
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 import { IDatesState } from "../types/dates-types";
 
-export const url = "https://62efc7d557311485d128298d.mockapi.io";
+export const url = "http://localhost:9999";
 
 const date = new Date();
 export const currentMonth = date.toLocaleString("default", { month: "long" });
@@ -17,6 +17,14 @@ export const daysOfWeek = [
 
 export const getDatesData = async () => {
   const resp = await fetch(`${url}/months`);
+  const data = await resp.json();
+  return data;
+};
+
+export const getCurrentDate = async () => {
+  const resp = await fetch(
+    `http://localhost:9999/months?month=${currentMonth}`
+  );
   const data = await resp.json();
   return data;
 };
@@ -42,9 +50,13 @@ export function nextMonth(
   dates: IDatesState[] | undefined,
   currentDate: IDatesState | undefined
 ) {
-  if (dates && currentDate) {
-    const nextMonthData = dates.indexOf(currentDate) + 1;
-    setCurrentDate(dates[nextMonthData]);
+  try {
+    if (dates && currentDate) {
+      const nextMonthData = dates.indexOf(currentDate) + 1;
+      setCurrentDate(dates[nextMonthData]);
+    }
+  } catch (error: unknown) {
+    throw new Error(error as string);
   }
 }
 
@@ -53,8 +65,12 @@ export function prevMonth(
   dates: IDatesState[] | undefined,
   currentDate: IDatesState | undefined
 ) {
-  if (dates && currentDate) {
-    const nextMonthData = dates.indexOf(currentDate) - 1;
-    setCurrentDate(dates[nextMonthData]);
+  try {
+    if (dates && currentDate) {
+      const nextMonthData = dates.indexOf(currentDate) - 1;
+      setCurrentDate(dates[nextMonthData]);
+    }
+  } catch (error: unknown) {
+    throw new Error(error as string);
   }
 }

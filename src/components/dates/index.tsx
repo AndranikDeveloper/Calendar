@@ -1,9 +1,9 @@
-import style from "./days.module.css";
+import style from "./style.module.css";
 import { daysOfWeek, nextMonth, prevMonth } from "../../utils/dates-services";
 import { Month } from "../month";
-import useDates from "./hooks/useDates";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import useDates from "./hooks/useDates";
 
 export const Dates = () => {
   const { currentDate, isDisabled, setCurrentDate, dates } = useDates();
@@ -39,7 +39,7 @@ export const Dates = () => {
             </tr>
           </thead>
           <tbody className={style["table-body"]}>
-            <Month date={currentDate!} />
+            {currentDate && <Month date={currentDate} />}
           </tbody>
         </table>
       </div>

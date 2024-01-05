@@ -9,15 +9,12 @@ interface IUseMonthDays {
 const useMonthDays = ({ date }: IUseMonthDays) => {
   const [days, setDays] = useState<(number[] | null[])[]>();
 
-  const day = new Date(`${date?.month} 1 2024`).getDay();
-  console.log(date?.dates);
-
   useEffect(() => {
-    const result = helper(date?.dates, day);
+    const result = helper(date);
     if (result) {
       setDays(result);
     }
-  }, [date?.dates, day]);
+  }, [date]);
 
   return { days };
 };

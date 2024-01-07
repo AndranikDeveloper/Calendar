@@ -1,34 +1,172 @@
 {
-    "specialDays": [
-        {
-            "name": "New Year",
-            "day": 1,
-            "month": "January",
-            "color": "red"
-        },
-        {
-            "name": "Women's Day",
-            "day": 8,
-            "month": "March",
-            "color": "pink"
-        },
-        {
-            "name": "Valentine's Day",
-            "day": 14,
-            "month": "February",
-            "color": "pink"
-        },
-        {
-            "name": "Genocide",
-            "day": 24,
-            "month": "April",
-            "color": "black"
-        },
-        {
-            "name": "My Birthday",
-            "day": 18,
-            "month": "February",
-            "color": "purple"
-        }
-    ]
+  "months": [
+    {
+      "month": "January",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+      ],
+      "id": "1"
+    },
+    {
+      "month": "February",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28
+      ],
+      "id": "2"
+    },
+    {
+      "month": "March",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+      ],
+      "id": "3"
+    },
+    {
+      "month": "April",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+      ],
+      "id": "4"
+    },
+    {
+      "month": "May",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+      ],
+      "id": "5"
+    },
+    {
+      "month": "June",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+      ],
+      "id": "6"
+    },
+    {
+      "month": "July",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+      ],
+      "id": "7"
+    },
+    {
+      "month": "August",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+      ],
+      "id": "8"
+    },
+    {
+      "month": "September",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+      ],
+      "id": "9"
+    },
+    {
+      "month": "October",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+      ],
+      "id": "10"
+    },
+    {
+      "month": "November",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+      ],
+      "id": "11"
+    },
+    {
+      "month": "December",
+      "dates": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 31
+      ],
+      "id": "12"
+    }
+  ],
+  "specialDays": [
+    {
+      "id": 1,
+      "name": "New Year",
+      "day": 1,
+      "month": "January",
+      "occasionState": {
+        "color": "red",
+        "value": "important"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Women's Day",
+      "day": 8,
+      "month": "March",
+      "occasionState": {
+        "color": "hotpink",
+        "value": "important"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Valentine's Day",
+      "day": 14,
+      "month": "February",
+      "occasionState": {
+        "color": "hotpink",
+        "value": "important"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Genocide",
+      "day": 24,
+      "month": "April",
+      "occasionState": {
+        "color": "black",
+        "value": "important"
+      }
+    },
+    {
+      "id": 5,
+      "name": "My Birthday",
+      "day": 18,
+      "month": "February",
+      "occasionState": {
+        "color": "red",
+        "value": "important"
+      }
+    },
+    {
+      "id": "cdeb19b8-ab35-4ab2-89d4-e3c03bbb9fa8",
+      "name": "birthday of brother",
+      "day": 9,
+      "month": "May",
+      "occasionState": {
+        "color": "yellow",
+        "value": "poor"
+      }
+    },
+    {
+      "id": "dc7235e4-f218-494d-9e84-d10275164eb3",
+      "name": "erererer",
+      "day": 14,
+      "month": "February",
+      "occasionState": {
+        "color": "yellow",
+        "value": "poor"
+      }
+    }
+  ]
 }

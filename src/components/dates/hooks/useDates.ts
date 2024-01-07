@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { IDatesState } from '../../../types/dates-types';
-import { currentMonth, getDatesData } from '../../../utils/dates-services';
+import { getCurrentDate, getDatesData } from '../../../utils/dates-services';
 
 const useDates = () => {
   const [dates, setDates] = useState<IDatesState[]>();
@@ -21,21 +21,29 @@ const useDates = () => {
   }, [currentDate?.month]);
 
   useEffect(() => {
-    (async function getDates() {
+    async function getDates() {
       const data = await getDatesData();
       setDates(data);
-    })();
+    }
+    getDates();
   }, []);
 
   useEffect(() => {
-    const current = dates?.find(
-      (date) => date.month.toLowerCase() === currentMonth.toLowerCase()
-    );
+    async function getCurrent() {
+      const data = await getCurrentDate();
+      setCurrentDate(data[0]);
+    }
+    getCurrent();
+  }, []);
 
-    setCurrentDate(current);
-  }, [dates]);
-
-  return { currentDate, isDisabled, setCurrentDate, dates, setIsDisabled };
+  return {
+    currentDate,
+    isDisabled,
+    setCurrentDate,
+    dates,
+    setIsDisabled,
+    setDates,
+  };
 };
 
 export default useDates;

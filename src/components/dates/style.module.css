@@ -6,10 +6,10 @@ th,td{
 .arrows {
     display: flex;
     justify-content: space-between;
+    outline: none;
 }
-.wrrapButton, .wrrapButton:focus, .wrrapButton:active {
-    border: none;
-    background-color: transparent;
+.wrrapButton {
+    outline: none;
 }
 
 

@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import { helper } from '../../../utils/month-services';
-import { IDatesState } from '../../../types/dates-types';
-// import { ISpecialDays } from '../../../types/server-types/special-days-types';
+import { useEffect, useState } from "react";
+import { helper } from "../../../utils/month-services";
+import { IDatesState } from "../../../types/dates-types";
 
 interface IUseMonthDays {
   date: IDatesState | undefined;
 }
-interface IOccasionState {
+export interface IOccasionState {
   month: string;
   day: number;
   id: number;
@@ -22,6 +21,9 @@ const useMonthDays = ({ date }: IUseMonthDays) => {
   const [isModal, setIsModal] = useState(false);
   const [currentDay, setCurrentDay] = useState<number | null>(-1);
   const [occasionDays, setOccasionDays] = useState<IOccasionState[]>();
+  const [isExist, setIsExist] = useState(false);
+  const [currentOccasionDate, setCurrentOccasionDate] =
+    useState<IOccasionState | null>(null);
 
   useEffect(() => {
     const result = helper(date);
@@ -39,7 +41,21 @@ const useMonthDays = ({ date }: IUseMonthDays) => {
     getOccasions();
   }, []);
 
-  return { days, isModal, setIsModal, currentDay, setCurrentDay, occasionDays };
+  const isOccasion = occasionDays?.find((el) => el.month === date?.month);
+
+  return {
+    days,
+    isModal,
+    setIsModal,
+    currentDay,
+    setCurrentDay,
+    occasionDays,
+    isOccasion,
+    isExist,
+    setIsExist,
+    currentOccasionDate,
+    setCurrentOccasionDate,
+  };
 };
 
 export default useMonthDays;

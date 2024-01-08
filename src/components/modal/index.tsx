@@ -1,46 +1,79 @@
-import React, { SetStateAction } from 'react';
-import style from './style.module.css';
-import { setOccasion } from '../../utils/month-services';
-import { IDatesState } from '../../types/dates-types';
-import useModalData from './hooks/useModalData';
+import React, { SetStateAction, useContext } from "react";
+import style from "./style.module.css";
+import { setOccasion } from "../../utils/month-services";
+import { IDatesState } from "../../types/dates-types";
+import useModalData from "./hooks/useModalData";
+import { IOccasionState } from "../month/hooks/useMonthDays";
+import WithoutOccasion from "./without-occasion";
+import CurrentOccasion from "./current-occasion";
+import { OccasionDays } from "../month";
 
 interface IModalProps {
   setIsModal: React.Dispatch<SetStateAction<boolean>>;
   date: IDatesState | undefined;
-  currentDay: number | null;
+  isExist: boolean;
+  setIsExist: React.Dispatch<SetStateAction<boolean>>;
+  currentOccasionDate: IOccasionState | null;
 }
 
-const Modal: React.FC<IModalProps> = ({ setIsModal, date, currentDay }) => {
-  const { colors, currentColor, nameValue, setCurrentColor, setNameValue } =
-    useModalData();
+const Modal: React.FC<IModalProps> = ({
+  setIsModal,
+  date,
+  isExist,
+  setIsExist,
+  currentOccasionDate,
+}) => {
+  const {
+    colors,
+    currentColor,
+    occasionValue,
+    setCurrentColor,
+    setOccasionValue,
+    inputRef,
+  } = useModalData(isExist, currentOccasionDate);
+
+  const occasion = useContext(OccasionDays);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setOccasion(date, currentDay, nameValue, currentColor);
+    setOccasion(
+      date,
+      occasion?.currentDay as number,
+      occasionValue as string,
+      currentColor
+    );
     setIsModal(false);
-    setNameValue('');
+    setOccasionValue("");
   }
+
+  function handleModal() {
+    setIsModal(false);
+    setIsExist(false);
+  }
+
   return (
     <div className={style.modal}>
-      <div className={style.background} onClick={() => setIsModal(false)}></div>
-      <form className={style['modal-content']} onSubmit={handleSubmit}>
+      <div className={style.background} onClick={handleModal}></div>
+      <form className={style["modal-content"]} onSubmit={handleSubmit}>
         <input
-          type='text'
-          value={nameValue}
-          className={style['modal-input']}
-          onChange={(e) => setNameValue(e.target.value)}
-          placeholder='Name of Occasion'
+          ref={inputRef}
+          type="text"
+          value={occasionValue}
+          className={style["modal-input"]}
+          onChange={(e) => setOccasionValue(e.target.value)}
+          placeholder="Name of Occasion"
           required
         />
-        <select className={style['modal-select']}>
-          {colors.map((i) => (
-            <option key={i.color} onClick={() => setCurrentColor(i)}>
-              {i.color} ---- {i.value}
-            </option>
-          ))}
-        </select>
-
-        <button className={style['modal-button']}>Add Occasion</button>
+        {isExist ? (
+          <CurrentOccasion
+            occasionValue={occasionValue as string}
+            currentOccasionDate={currentOccasionDate}
+            inputRef={inputRef}
+            setIsModal={setIsModal}
+          />
+        ) : (
+          <WithoutOccasion colors={colors} setCurrentColor={setCurrentColor} />
+        )}
       </form>
     </div>
   );

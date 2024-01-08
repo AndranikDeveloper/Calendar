@@ -42,3 +42,16 @@
 .modal-button {
     border: 1px solid grey;
 }
+
+.buttons {
+    margin-top: 30px;
+}
+
+
+.feature-button {
+    border: 1px solid grey;
+}
+
+.feature-button:not(:first-child) {
+    margin-left: 20px;
+}

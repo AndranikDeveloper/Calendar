@@ -1,9 +1,9 @@
-import React, { createContext } from "react";
-import { IDatesState } from "../../types/dates-types";
-import useMonthDays, { IOccasionState } from "./hooks/useMonthDays";
-import style from "./style.module.css";
-import Modal from "../modal";
-import { createPortal } from "react-dom";
+import React, { createContext } from 'react';
+import { IDatesState } from '../../types/dates-types';
+import useMonthDays, { IOccasionState } from './hooks/useMonthDays';
+import style from './style.module.css';
+import Modal from '../modal';
+import { createPortal } from 'react-dom';
 
 interface IMonthProps {
   date?: IDatesState;
@@ -12,6 +12,7 @@ interface IMonthProps {
 interface IOccasionContext {
   currentDay: number | null;
   occasionDays: IOccasionState[] | undefined;
+  setOccasionDays: (val: IOccasionState[] | undefined) => void;
 }
 
 export const OccasionDays = createContext<IOccasionContext | undefined>(
@@ -30,13 +31,14 @@ export const Month: React.FC<IMonthProps> = ({ date }) => {
     occasionDays,
     currentOccasionDate,
     setCurrentOccasionDate,
+    setOccasionDays,
   } = useMonthDays({ date });
 
   function toggleModal(dayNumber: number) {
     const currentOccasion = occasionDays?.find(
       (el) => el.month === date?.month && el.day === dayNumber
     );
-    console.log(currentOccasion);
+    console.log('NOR LOG', isOccasion);
 
     if (currentOccasion) {
       setIsExist((prev) => !prev);
@@ -58,7 +60,9 @@ export const Month: React.FC<IMonthProps> = ({ date }) => {
               className={`${style.day}`}
               onClick={() => toggleModal(number as number)}
               style={
-                isOccasion && number === isOccasion.day
+                isOccasion &&
+                number === isOccasion.day &&
+                isOccasion.month === date?.month
                   ? {
                       backgroundColor: isOccasion.occasionState.color,
                     }
@@ -72,7 +76,9 @@ export const Month: React.FC<IMonthProps> = ({ date }) => {
       ))}
       {isModal &&
         createPortal(
-          <OccasionDays.Provider value={{ occasionDays, currentDay }}>
+          <OccasionDays.Provider
+            value={{ occasionDays, currentDay, setOccasionDays }}
+          >
             <Modal
               setIsModal={setIsModal}
               date={date}
@@ -81,7 +87,7 @@ export const Month: React.FC<IMonthProps> = ({ date }) => {
               currentOccasionDate={currentOccasionDate}
             />
           </OccasionDays.Provider>,
-          document.getElementById("modal-root") as HTMLDivElement
+          document.getElementById('modal-root') as HTMLDivElement
         )}
     </>
   );

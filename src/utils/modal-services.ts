@@ -1,5 +1,5 @@
-import React, { MutableRefObject, SetStateAction } from "react";
-import { IOccasionState } from "../components/month/hooks/useMonthDays";
+import React, { MutableRefObject, SetStateAction } from 'react';
+import { IOccasionState } from '../components/month/hooks/useMonthDays';
 
 export function editOccasionValue(
   setIsEdit: React.Dispatch<SetStateAction<boolean>>,
@@ -13,17 +13,19 @@ export async function deleteOccasion(
   id: number,
   setIsModal: React.Dispatch<SetStateAction<boolean>>,
   occasionDays: IOccasionState[] | undefined,
-  currentDay: number | undefined | null
+  currentDay: number | undefined | null,
+  setOccasionDays: ((val: IOccasionState[] | undefined) => void) | undefined
 ) {
   if (id) {
     await fetch(`http://localhost:9999/specialDays/${id}`, {
-      method: "DELETE",
+      method: 'DELETE',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
   }
-  occasionDays?.filter((date) => date.day === currentDay);
+  // occasionDays?.filter((date) => date.day === currentDay);
+  setOccasionDays!(occasionDays?.filter((date) => date.day === currentDay));
   setIsModal(false);
 }
 
@@ -34,10 +36,10 @@ export async function saveOccasionValue(
 ) {
   if (currentOccasionDate) {
     await fetch(`http://localhost:9999/specialDays/${currentOccasionDate.id}`, {
-      method: "PATCH",
+      method: 'PATCH',
       body: JSON.stringify({ name: occasionValue }),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
   }

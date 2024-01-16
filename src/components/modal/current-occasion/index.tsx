@@ -4,15 +4,15 @@ import React, {
   forwardRef,
   useContext,
   useState,
-} from "react";
-import { IOccasionState } from "../../month/hooks/useMonthDays";
-import style from "../style.module.css";
+} from 'react';
+import { IOccasionState } from '../../month/hooks/useMonthDays';
+import style from '../style.module.css';
 import {
   deleteOccasion,
   editOccasionValue,
   saveOccasionValue,
-} from "../../../utils/modal-services";
-import { OccasionDays } from "../../month";
+} from '../../../utils/modal-services';
+import { OccasionDays } from '../../month';
 
 interface ICurrentOccasionProps {
   occasionValue: string;
@@ -30,7 +30,7 @@ const CurrentOccasion: React.FC<ICurrentOccasionProps> = forwardRef(
       <div className={style.buttons}>
         {isEdit ? (
           <button
-            type="button"
+            type='button'
             onClick={() =>
               saveOccasionValue(occasionValue, currentOccasionDate, setIsModal)
             }
@@ -40,21 +40,22 @@ const CurrentOccasion: React.FC<ICurrentOccasionProps> = forwardRef(
         ) : (
           <>
             <button
-              type="button"
-              className={style["feature-button"]}
+              type='button'
+              className={style['feature-button']}
               onClick={() => editOccasionValue(setIsEdit, inputRef)}
             >
               Edit
             </button>
             <button
-              type="button"
-              className={style["feature-button"]}
+              type='button'
+              className={style['feature-button']}
               onClick={() =>
                 deleteOccasion(
                   currentOccasionDate!.id as number,
                   setIsModal,
                   occasion?.occasionDays,
-                  occasion?.currentDay
+                  occasion?.currentDay,
+                  occasion?.setOccasionDays
                 )
               }
             >

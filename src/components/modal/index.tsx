@@ -1,12 +1,12 @@
-import React, { SetStateAction, useContext } from "react";
-import style from "./style.module.css";
-import { setOccasion } from "../../utils/month-services";
-import { IDatesState } from "../../types/dates-types";
-import useModalData from "./hooks/useModalData";
-import { IOccasionState } from "../month/hooks/useMonthDays";
-import WithoutOccasion from "./without-occasion";
-import CurrentOccasion from "./current-occasion";
-import { OccasionDays } from "../month";
+import React, { SetStateAction, useContext } from 'react';
+import style from './style.module.css';
+import { setOccasion } from '../../utils/month-services';
+import { IDatesState } from '../../types/dates-types';
+import useModalData from './hooks/useModalData';
+import { IOccasionState } from '../month/hooks/useMonthDays';
+import WithoutOccasion from './without-occasion';
+import CurrentOccasion from './current-occasion';
+import { OccasionDays } from '../month';
 
 interface IModalProps {
   setIsModal: React.Dispatch<SetStateAction<boolean>>;
@@ -43,7 +43,7 @@ const Modal: React.FC<IModalProps> = ({
       currentColor
     );
     setIsModal(false);
-    setOccasionValue("");
+    setOccasionValue('');
   }
 
   function handleModal() {
@@ -54,14 +54,14 @@ const Modal: React.FC<IModalProps> = ({
   return (
     <div className={style.modal}>
       <div className={style.background} onClick={handleModal}></div>
-      <form className={style["modal-content"]} onSubmit={handleSubmit}>
+      <form className={style['modal-content']} onSubmit={handleSubmit}>
         <input
           ref={inputRef}
-          type="text"
+          type='text'
           value={occasionValue}
-          className={style["modal-input"]}
+          className={style['modal-input']}
           onChange={(e) => setOccasionValue(e.target.value)}
-          placeholder="Name of Occasion"
+          placeholder='Name of Occasion'
           required
         />
         {isExist ? (

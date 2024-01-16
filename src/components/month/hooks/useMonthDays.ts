@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { helper } from "../../../utils/month-services";
-import { IDatesState } from "../../../types/dates-types";
+import { useEffect, useState } from 'react';
+import { helper } from '../../../utils/month-services';
+import { IDatesState } from '../../../types/dates-types';
 
 interface IUseMonthDays {
   date: IDatesState | undefined;
@@ -55,6 +55,7 @@ const useMonthDays = ({ date }: IUseMonthDays) => {
     setIsExist,
     currentOccasionDate,
     setCurrentOccasionDate,
+    setOccasionDays,
   };
 };
 

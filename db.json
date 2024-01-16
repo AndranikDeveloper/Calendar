@@ -3,436 +3,96 @@
     {
       "month": "January",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
       ],
       "id": "1"
     },
     {
       "month": "February",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28
       ],
       "id": "2"
     },
     {
       "month": "March",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
       ],
       "id": "3"
     },
     {
       "month": "April",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30
       ],
       "id": "4"
     },
     {
       "month": "May",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
       ],
       "id": "5"
     },
     {
       "month": "June",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30
       ],
       "id": "6"
     },
     {
       "month": "July",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
       ],
       "id": "7"
     },
     {
       "month": "August",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
       ],
       "id": "8"
     },
     {
       "month": "September",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30
       ],
       "id": "9"
     },
     {
       "month": "October",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
       ],
       "id": "10"
     },
     {
       "month": "November",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30
       ],
       "id": "11"
     },
     {
       "month": "December",
       "dates": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        31
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 31
       ],
       "id": "12"
     }
@@ -440,7 +100,27 @@
   "specialDays": [
     {
       "id": 1,
-      "name": "New Yearsdsdasdas",
+      "name": "My Birthday",
+      "day": 18,
+      "month": "February",
+      "occasionState": {
+        "color": "red",
+        "value": "important"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Women's Day",
+      "day": 8,
+      "month": "March",
+      "occasionState": {
+        "color": "pink",
+        "value": "important"
+      }
+    },
+    {
+      "id": 3,
+      "name": "New Year",
       "day": 1,
       "month": "January",
       "occasionState": {
@@ -459,222 +139,22 @@
       }
     },
     {
-      "id": "dc7235e4-f218-494d-9e84-d10275164eb3",
-      "name": "erererer",
+      "id": 5,
+      "name": "Valentine's Day",
       "day": 14,
       "month": "February",
       "occasionState": {
-        "color": "yellow",
+        "color": "pink",
         "value": "poor"
       }
     },
     {
-      "id": "c519e013-2aa1-469c-ab4f-84295d3fce86",
-      "name": "Valentine's Day",
-      "day": 4,
-      "month": "February",
+      "id": 6,
+      "name": "Winner Day Of The WW2",
+      "day": 9,
+      "month": "May",
       "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "a8e31c3a-d43e-4bd7-8790-be1c51ff9e7c",
-      "name": "Valentine's Day",
-      "day": 4,
-      "month": "February",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "8e63f816-87c4-4c55-a94d-9ea825e506f7",
-      "name": "Valentine's Day",
-      "day": -1,
-      "month": "February",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "357e38e6-5ca3-4f69-8182-9a3cb7aef212",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "b0487450-e04a-4d59-9f87-91262587e716",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "2cb0757b-5054-4b6f-89f1-47ff33edc86c",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "1295e0d8-d404-4a22-a58f-e09ebd6e53fa",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "3dc3223f-0d4f-4949-b056-e8dc1ac668dd",
-      "name": "Women's Day",
-      "day": -1,
-      "month": "March",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "9ae05f2f-20eb-48cb-af9c-e0f876745bd0",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "3e15048a-0465-4314-8ec7-ba077d0d973d",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "434f2857-3da2-4e57-8e1c-a911cf8e4370",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "e22743d1-6541-4903-9282-7c7c3fe2c502",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "afd7eded-9c93-431a-b331-b1737b4160a0",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "a415b14b-dbd3-4784-8108-df3754991e9c",
-      "name": "Valentine's Day",
-      "day": -1,
-      "month": "February",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "1a26c4b3-2f4e-4987-8673-0376b60e3ae0",
-      "name": "Valentine's Day",
-      "day": -1,
-      "month": "February",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "17539d25-1eb9-4aad-acb1-ddca5b488e74",
-      "name": "Valentine's Day",
-      "day": -1,
-      "month": "February",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "b9baeb61-685f-42b1-af13-10997d4d5663",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "c9ebc2bc-d8d7-45cf-910c-2ea7ce3cbf42",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "30771e4b-1c1b-4ba2-9305-dd4f89453c46",
-      "name": "Valentine's Day",
-      "day": -1,
-      "month": "February",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "e05c7b44-a38e-4fce-9e5a-c0c4229dc944",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
-        "value": "poor"
-      }
-    },
-    {
-      "id": "ea7b7b7d-dec3-4283-94dc-6887a5fa6858",
-      "name": "New Year",
-      "day": -1,
-      "month": "January",
-      "occasionState": {
-        "color": "yellow",
+        "color": "red",
         "value": "poor"
       }
     }
